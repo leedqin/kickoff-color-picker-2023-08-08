@@ -1,10 +1,15 @@
 .welcomeContainer {
   padding: 10px 20px;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .welcome {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 20px; 
   font-size: 2.5rem;
 }
 
@@ -12,43 +17,109 @@
   width: 100%;
   max-width: 600px;
   display: flex;
-  height: 42px;
-  margin: 50px auto;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto; 
 }
 
-.input {
-  flex: 1;
+.input, .button {
   padding: 10px 12px;
-  border-radius: 3px 0 0 3px;
-  border: solid 1px grey;
-  border-right: none;
-  box-shadow: none;
-  outline: none;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  flex-grow: 1;
 }
 
 .input:focus {
   border-color: #830051;
+  outline: none;
 }
 
 .button {
-  height: 100%;
+  height: 42px; 
   outline: none;
   text-decoration: none;
   text-align: center;
-  line-height: normal;
+  line-height: 42px;
   font-size: 1rem;
   font-weight: 400;
   border-style: solid;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px 0 10px; 
+  margin-right:10px;
   letter-spacing: 0.5px;
-  border-radius: 0 3px 3px 0;
+  border-radius: 3px 3px 3px 3px;
   border-width: 1px;
   background-color: #830051;
   border-color: #830051;
   color: white;
 }
 
+
 .button:disabled {
-  opacity: 0.4;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
+
+.paletteContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.palette {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px; 
+}
+
+.paletteColors {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.colorBox {
+  flex-grow: 1;
+  margin: 0 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.colorSample {
+  width: 100%;
+  height: 60px;
+}
+
+.colorImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.editButton, .deleteButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
